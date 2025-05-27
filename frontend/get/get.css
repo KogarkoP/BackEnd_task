@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.navigation {
+  display: flex;
+  justify-content: end;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navigation a {
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #000;
+}
+
+.navigation a:hover {
+  color: #0000ff;
+}
+
+.page_wrapper {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.movie_recommendations {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}

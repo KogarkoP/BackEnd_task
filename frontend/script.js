@@ -1,12 +1,9 @@
 const insertRecomendation = async (data) => {
-  const response = await fetch(
-    "http://localhost:3005/insertMovieRecomendation",
-    {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: { "content-type": "application/json" },
-    }
-  );
+  const response = await fetch("http://localhost:3005/movies", {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: { "content-type": "application/json" },
+  });
   const recomendation = await response.json();
   return recomendation;
 };
@@ -18,7 +15,7 @@ const description = document.getElementById("description");
 const imdbLink = document.getElementById("imdb_link");
 const submitBtn = document.getElementById("submit_btn");
 
-submitBtn.addEventListener("click", () => {
+submitBtn.addEventListener("click", async () => {
   const data = {
     id: id.value,
     title: title.value,
@@ -27,7 +24,7 @@ submitBtn.addEventListener("click", () => {
     imdbLink: imdbLink.value,
   };
 
-  const recomendation = insertRecomendation(data);
+  const recomendation = await insertRecomendation(data);
 
   if (recomendation) {
     console.log("SUCCESS!!!!!!!!!");

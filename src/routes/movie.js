@@ -11,18 +11,18 @@ import {
 
 const router = express.Router();
 
-router.get("/getMoviesRecomendations", GET_ALL_MOVIE_REC);
+router.get("/movies", GET_ALL_MOVIE_REC);
 
-router.get("/getById/:id", GET_BY_ID);
+router.get("/movies/:id", GET_BY_ID);
 
-router.get("/getBestMovie", GET_BEST_MOVIE);
+router.get("/bestMovie", GET_BEST_MOVIE);
 
-router.get("/getMoviesHigherThan/:rating", GET_MOVIES_BY_RATING);
+router.get("/movies/:rating", GET_MOVIES_BY_RATING);
 
-router.post("/insertMovieRecomendation", IN_MOVIE_RECOM);
+router.post("/movies", IN_MOVIE_RECOM);
 
-router.get("/sortByRating", SORT_BY_RATING);
+router.get("/moviesByRating", SORT_BY_RATING);
 
-router.delete("/deleteMoviesRecomendations", DELETE_RECOM);
+router.delete("/movies", DELETE_RECOM);
 
 export default router;

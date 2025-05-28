@@ -67,7 +67,7 @@ export const IN_MOVIE_RECOM = (req, res) => {
   const movieRecomendation = {
     id: req.body.id,
     title: req.body.title,
-    rating: req.body.rating,
+    rating: +req.body.rating,
     description: req.body.description,
     imdbLink: req.body.imdbLink,
   };

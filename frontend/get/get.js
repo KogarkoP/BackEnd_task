@@ -1,5 +1,5 @@
 const fetchRecommendations = async () => {
-  const response = await fetch("http://localhost:3005/getMoviesRecomendations");
+  const response = await fetch("http://localhost:3005/movies");
 
   const data = await response.json();
   return data.movies;

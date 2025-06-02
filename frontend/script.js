@@ -24,9 +24,5 @@ submitBtn.addEventListener("click", async () => {
     imdbLink: imdbLink.value,
   };
 
-  const recomendation = await insertRecomendation(data);
-
-  if (recomendation) {
-    console.log("SUCCESS!!!!!!!!!");
-  }
+  insertRecomendation(data);
 });

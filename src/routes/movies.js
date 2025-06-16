@@ -7,7 +7,7 @@ import {
   IN_MOVIE_RECOM,
   SORT_BY_RATING,
   DELETE_RECOM,
-} from "../controllers/movie.js";
+} from "../controllers/movies.js";
 
 const router = express.Router();
 

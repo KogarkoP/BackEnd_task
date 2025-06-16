@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
-import movieRouter from "./src/routes/movie.js";
+import movieRouter from "./src/routes/movies.js";
 import "dotenv/config";
 
 const app = express();
